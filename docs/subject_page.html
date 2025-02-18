@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Subject Resources</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>School Resources</h1>
+    </div>
+</header>
+
+<main>
+    <section id="resources">
+        <h2>Resources for <span id="subject-name"></span> by <span id="professor-name"></span></h2>
+
+        <!-- Dynamic content will be added here -->
+        <div class="resource-item">
+            <h3>Math Test - Midterm</h3>
+            <a href="uploads/math_test.pdf" class="download-btn">Download Test</a>
+        </div>
+        <div class="resource-item">
+            <h3>History Test - Final Exam</h3>
+            <a href="uploads/history_final.pdf" class="download-btn">Download Test</a>
+        </div>
+        
+        <!-- Add file upload functionality for this page -->
+        <h3>Upload a New Resource</h3>
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="test-name" placeholder="Test Name" required>
+            <input type="file" name="file-upload" accept=".pdf, .docx, .png" required>
+            <button type="submit">Upload</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 School Resources. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
