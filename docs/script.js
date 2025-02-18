@@ -1,26 +1,24 @@
-// You can add interactive features here later if needed
-// For example, you can add a form to upload new resources or dynamically add content
-console.log("School Resources Page Loaded!");
+document.addEventListener("DOMContentLoaded", function () {
+    // Get query parameters from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const subject = urlParams.get('subject');
+    const professor = urlParams.get('professor');
 
-// Example: if you want to dynamically add resources, here's a simple example:
+    // Display subject and professor name dynamically
+    if (subject && professor) {
+        document.getElementById('subject-name').textContent = subject;
+        document.getElementById('professor-name').textContent = professor;
+    }
 
-function addNewResource(sectionId, title, link) {
-    const section = document.getElementById(sectionId);
-    const newResource = document.createElement('div');
-    newResource.classList.add('resource');
-    
-    const resourceTitle = document.createElement('h3');
-    resourceTitle.textContent = title;
-    
-    const resourceLink = document.createElement('a');
-    resourceLink.href = link;
-    resourceLink.textContent = "Download " + title;
-    
-    newResource.appendChild(resourceTitle);
-    newResource.appendChild(resourceLink);
-    
-    section.appendChild(newResource);
-}
+    // Request form handling
+    document.getElementById('request-form').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-// Example usage
-// addNewResource('tests', 'New Math Test - 2025', '#');
+        const subjectName = document.getElementById('subject-name').value;
+        const professorName = document.getElementById('professor-name').value;
+
+        if (subjectName && professorName) {
+            alert(`Your request for subject: ${subjectName} and professor: ${professorName} has been submitted!`);
+        }
+    });
+});
