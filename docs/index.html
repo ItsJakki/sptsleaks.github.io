@@ -4,66 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>School Notes & Tests</title>
+    <title>School Resources</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>My School Resources</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#tests">Tests</a></li>
-                <li><a href="#notes">Notes</a></li>
-                <li><a href="#other">Other Resources</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="tests">
-        <h2>Previous Tests</h2>
-        <p>Here you can upload or link your past tests.</p>
-        <div class="resource">
-            <h3>Math Test - 2024</h3>
-            <a href="#">Download Test</a>
-        </div>
-        <div class="resource">
-            <h3>History Test - 2023</h3>
-            <a href="#">Download Test</a>
+<header>
+    <div class="logo">
+        <h1>School Resources</h1>
+        <p>Upload and share your study materials</p>
+    </div>
+</header>
+
+<main>
+    <section id="subjects">
+        <h2>Subjects</h2>
+        <div class="subject-list">
+            <div class="subject-item">
+                <h3>Mathematics</h3>
+                <p class="professor">Professor John Doe</p>
+                <a href="subject_page.html?subject=Math&professor=John%20Doe" class="subject-link">Go to Resources</a>
+            </div>
+            <div class="subject-item">
+                <h3>History</h3>
+                <p class="professor">Professor Jane Smith</p>
+                <a href="subject_page.html?subject=History&professor=Jane%20Smith" class="subject-link">Go to Resources</a>
+            </div>
+            <!-- Add more subjects dynamically here -->
         </div>
     </section>
 
-    <section id="notes">
-        <h2>Class Notes</h2>
-        <p>These are my notes from different subjects.</p>
-        <div class="resource">
-            <h3>Science Notes - Chapter 1</h3>
-            <a href="#">Download Notes</a>
-        </div>
-        <div class="resource">
-            <h3>English Notes - Literature</h3>
-            <a href="#">Download Notes</a>
-        </div>
+    <section id="request">
+        <h2>Request a Subject or Professor</h2>
+        <form id="request-form">
+            <label for="subject-name">Subject Name:</label>
+            <input type="text" id="subject-name" name="subject-name" required>
+
+            <label for="professor-name">Professor Name:</label>
+            <input type="text" id="professor-name" name="professor-name" required>
+
+            <button type="submit">Request</button>
+        </form>
     </section>
+</main>
 
-    <section id="other">
-        <h2>Other Resources</h2>
-        <p>Additional resources like study materials and links.</p>
-        <div class="resource">
-            <h3>Study Guide - Semester 1</h3>
-            <a href="#">Download Guide</a>
-        </div>
-        <div class="resource">
-            <h3>Reference Links</h3>
-            <a href="#">Visit Resources</a>
-        </div>
-    </section>
+<footer>
+    <p>&copy; 2025 School Resources. All rights reserved.</p>
+</footer>
 
-    <footer>
-        <p>&copy; 2025 My School Resources</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
